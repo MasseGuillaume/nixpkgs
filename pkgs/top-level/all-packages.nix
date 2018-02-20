@@ -7786,6 +7786,8 @@ with pkgs;
 
   msgpack-tools = callPackage ../development/tools/msgpack-tools { };
 
+  msbuild = callPackage ../development/tools/build-managers/msbuild { };
+
   msitools = callPackage ../development/tools/misc/msitools { };
 
   multi-ghc-travis = haskell.lib.justStaticExecutables haskellPackages.multi-ghc-travis;
