@@ -23,6 +23,16 @@
     The default Python 3 interpreter is now CPython 3.7 instead of CPython 3.6.
     </para>
    </listitem>
+
+    <listitem>
+      <para>
+        A major refactoring of the Kubernetes module has been completed.
+        Refactorings primarily focus on decoupling components and enhancing
+        security. Two-way TLS and RBAC has been enabled by default for all
+        components, which slightly changes the way the module is configured.
+        See: <xref linkend="sec-kubernetes"/> for details.
+      </para>
+    </listitem>
   </itemizedlist>
  </section>
 
