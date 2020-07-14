@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-VERSION="2.2.1"
+VERSION="2.6.1"
 
 declare -A plugins
 plugins=(
-    ["aws"]="2.5.0"
-    ["gcp"]="3.6.0"
-    ["random"]="2.1.1"
-    ["kubernetes"]="2.2.0"
-    ["postgresql"]="2.1.1"
+    ["aws"]="2.13.0"        # https://github.com/pulumi/pulumi-aws/releases
+    ["gcp"]="3.13.0"        # https://github.com/pulumi/pulumi-gcp/releases
+    ["random"]="2.2.0"      # https://github.com/pulumi/pulumi-random/releases
+    ["kubernetes"]="2.4.0"  # https://github.com/pulumi/pulumi-kubernetes/releases
+    ["postgresql"]="2.2.2"  # https://github.com/pulumi/pulumi-postgresql/releases
 )
 
 function genMainSrc() {
@@ -37,7 +37,7 @@ function genSrcs() {
 }
 
 cat <<EOF
-# DO NOT EDIT! This file is generated automatically by update.sh
+# DO NOT EDIT! This file is generated automatically by running ./update.sh > data.nix
 { }:
 {
   version = "${VERSION}";
